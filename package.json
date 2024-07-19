@@ -13,7 +13,7 @@
   },
   "keywords": [
     "nadesiko3",
-    "sqlite3"
+    "TOML"
   ],
   "author": "kujirahand",
   "license": "MIT",
