@@ -1,5 +1,4 @@
 // TOMLを読むためのプラグイン
-import { NakoSystem } from '../core/src/plugin_api.mjs'
 import TOML from 'smol-toml'
 
 const PluginTOML = {
@@ -17,7 +16,7 @@ const PluginTOML = {
     type: 'func',
     josi: [],
     pure: true,
-    fn: function (sys: NakoSystem) {
+    fn: function (sys) {
     }
   },
   // @TOML
@@ -25,7 +24,7 @@ const PluginTOML = {
     type: 'func',
     josi: [['を', 'の', 'から']],
     pure: true,
-    fn: function (s: string, sys: NakoSystem) {
+    fn: function (s, sys) {
       return TOML.parse(s)
     }
   },
@@ -33,7 +32,7 @@ const PluginTOML = {
     type: 'func',
     josi: [['を', 'から', 'の']],
     pure: true,
-    fn: function (s: object, sys: NakoSystem) {
+    fn: function (s, sys) {
       return TOML.stringify(s)
     },
     return_none: true
@@ -42,6 +41,6 @@ const PluginTOML = {
 
 export default PluginTOML
 
-if (typeof (navigator.nako3) !== 'undefined') {
+if (typeof (navigator) === 'object' && typeof (navigator.nako3)) {
   navigator.nako3.addPluginObject('PluginTOML', PluginTOML)
 }
