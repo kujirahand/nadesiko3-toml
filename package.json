@@ -1,6 +1,6 @@
 {
   "name": "nadesiko3-toml",
-  "version": "3.6.9",
+  "version": "3.6.10",
   "description": "TOML parser for Nadesiko3",
   "main": "src/nadesiko3-toml.js",
   "scripts": {
