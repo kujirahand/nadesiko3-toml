@@ -1,10 +1,11 @@
 {
   "name": "nadesiko3-toml",
-  "version": "3.6.0",
+  "version": "3.6.9",
   "description": "TOML parser for Nadesiko3",
   "main": "nadesiko3-toml.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "esbuild src/nadesiko3-toml.js --bundle --minify --outfile=nadesiko3-toml.js"
   },
   "type": "module",
   "repository": {
@@ -21,7 +22,8 @@
     "url": "https://github.com/kujirahand/nadesiko3-toml/issues"
   },
   "homepage": "https://github.com/kujirahand/nadesiko3-toml#readme",
-  "dependencies": {
+  "devDependencies": {
+    "esbuild": "^0.23.0",
     "smol-toml": "^1.3.0"
   }
 }
