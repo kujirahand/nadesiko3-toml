@@ -40,6 +40,6 @@ const PluginTOML = {
 
 export default PluginTOML
 
-if (typeof (navigator) === 'object' && typeof (navigator.nako3)) {
+if (typeof (navigator) === 'object' && typeof (navigator.nako3) && typeof (navigator.nako3.addPluginObject)) {
   navigator.nako3.addPluginObject('PluginTOML', PluginTOML)
 }
